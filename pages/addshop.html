@@ -1,0 +1,39 @@
+<div content-for="title">
+  <span>Buscar Tienda</span>
+</div>
+
+<div class="scrollable" >
+ <div class="scrollable-content section">
+   
+   <form action="" id="">     
+       <input
+        bs-form-control
+        
+        type="text" 
+        ng-model="name"
+        label="Nombre" 
+        label-class="col-xs-3 col-sm-2 col-lg-1" 
+        class="col-xs-9 col-sm-10 col-lg-11"
+        placeholder="..."
+       />
+
+<div bs-panel class="form-actions">
+
+      <div content-for="navbarAction" duplicate>
+        <button class="btn btn-primary pull-right" ng-click="search()">
+          Buscar
+        </button>
+      </div>
+    </div>
+</form>
+<p>Resultados</p>
+
+ <div class="panel panel-default">
+	<a ng-repeat="item in items" href="#/shop/{{item._id.$oid}}" class="list-group-item">
+        <span ng-bind-html="highlight(item.name, name)"></span> <i class="fa fa-chevron-right pull-right"></i>
+      </a>	
+    </div>
+  
+</div>
+</div>
+

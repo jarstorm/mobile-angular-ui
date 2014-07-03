@@ -1,0 +1,26 @@
+
+
+<div content-for="title">
+  <span>Mis Tiendas</span>      
+</div>
+
+<div class="scrollable">
+  <div class="scrollable-content">
+<h1> Tiendas a las que sigue </h1>		
+	<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+	<a ng-repeat="item in items" href="#/shop/{{item._id.$oid}}" class="list-group-item">
+        {{ item.name }} <i class="fa fa-chevron-right pull-right"></i>
+      </a>
+	  	
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+  

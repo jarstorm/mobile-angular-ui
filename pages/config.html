@@ -1,0 +1,92 @@
+<div content-for="title">
+  <span>Configuracion</span>
+</div>
+<div class="scrollable">
+  <div class="scrollable-content">
+ <form action="" id="">
+
+     <div bs-panel>
+
+       <input
+        bs-form-control
+        disabled="true"
+        type="text" 
+        ng-model="user.user"
+        label="Usuario" 
+        label-class="col-xs-3 col-sm-2 col-lg-1" 
+        class="col-xs-9 col-sm-10 col-lg-11"
+        placeholder="..."
+       />
+	   <input
+        bs-form-control
+        
+        type="text" 
+        ng-model="user.phone"
+        label="Teléfono" 
+        label-class="col-xs-3 col-sm-2 col-lg-1" 
+        class="col-xs-9 col-sm-10 col-lg-11"
+        placeholder="..."
+       />
+	   <input
+        bs-form-control
+        
+        type="text" 
+        ng-model="user.city"
+        label="Ciudad" 
+        label-class="col-xs-3 col-sm-2 col-lg-1" 
+        class="col-xs-9 col-sm-10 col-lg-11"
+        placeholder="..."
+       />
+	   <input
+        bs-form-control
+        
+        type="text" 
+        ng-model="user.state"
+        label="Comunidad" 
+        label-class="col-xs-3 col-sm-2 col-lg-1" 
+        class="col-xs-9 col-sm-10 col-lg-11"
+        placeholder="..."
+       />
+	   <input
+        bs-form-control
+        
+        type="text" 
+        ng-model="user.birth"
+        label="Fecha nacimiento" 
+        label-class="col-xs-3 col-sm-2 col-lg-1" 
+        class="col-xs-9 col-sm-10 col-lg-11"
+        placeholder="..."
+       />
+</div>	
+<div bs-panel title="Mensajes">   
+	   <switch
+        bs-form-control
+        ng-change="switchChanged()"
+        ng-model="user.city_notification"
+        ng-click="switchClicked()"
+        label="Ciudad"
+        label-class="col-xs-3 col-sm-2 col-lg-1"
+        class="col-xs-9 col-sm-10 col-lg-11" 
+        >
+        </switch>
+		<switch
+        bs-form-control
+        ng-change="switchChanged()"
+        ng-model="user.state_notification"
+        ng-click="switchClicked()"
+        label="Comunidad"
+        label-class="col-xs-3 col-sm-2 col-lg-1"
+        class="col-xs-9 col-sm-10 col-lg-11" 
+        >
+        </switch>
+</div>
+<div bs-panel class="form-actions">
+      <div content-for="navbarAction" duplicate>
+        <button class="btn btn-primary" ng-click="save()">
+          Actualizar
+        </button>
+      </div>
+    </div>
+</form>
+</div>
+</div>

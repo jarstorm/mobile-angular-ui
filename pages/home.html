@@ -1,0 +1,28 @@
+<!-- home.html -->
+<div content-for="title">
+  <span>Mensajes</span>
+</div>
+
+
+<div class="scrollable">
+  <div class="scrollable-content">
+		
+	<div class="panel-group" id="accordion">
+  <div class="panel panel-default" ng-repeat="item in items">
+    <div class="panel-heading" toggle target="collapse{{$index}}">
+      <p class="panel-title">
+          <b>{{item.owner_name}}</b> <small class="pull-right">{{item.date | date:'HH:mm'}}</small>
+      </p>
+	  
+    </div>
+    <div id="collapse{{$index}}" toggleable active-class="in" exclusion-group="accordion1" class="panel-collapse collapse">
+      <div class="panel-body">
+		{{item.text}}		
+		<br><a href="#/shop/{{item.owner}}" class="pull-right">Ver info de la tienda</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>

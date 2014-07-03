@@ -1,0 +1,24 @@
+<div content-for="title">
+  <span>{{shop.name}}</span>
+</div>
+
+<div content-for="rightMenu">
+  <a href class="btn btn-default fa fa-check-circle fa-4x pull-right" ng-click="follow()" ng-show="!following"></a>  
+  <a href class="btn btn-default fa fa-trash-o fa-4x pull-right" ng-click="unfollow()" ng-show="following"></a>  
+</div>
+
+<div class="scrollable">
+  <div class="scrollable-content">
+
+<img src="{{shop.image}}" class="col-md-4"/>
+<p> {{shop.description}}</p>
+<p> Telefono: {{shop.phone}}</p>
+<p> Situado en: {{shop.street}}</p>
+<p> Número de seguidores: {{shop.followers}}</p>
+<h1> Ultimos mensajes </h1>
+<div class="panel panel-default" ng-repeat="coment in shop.coments">
+	<h1> {{coment.date | date:'HH:mm'}} </h1>
+	<h2> {{coment.text}} </h2>
+</div>
+</div>
+</div>
